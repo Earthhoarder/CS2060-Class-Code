@@ -1,13 +1,41 @@
+
 // Fig. 2.1: fig02_01.c
 // A first program in C 
 #include <stdio.h>
+#include <string.h>
+
+int areaCalc(int length, int width);
+int lwDiv(int length, int width);
 
 // function main begins program execution 
-int main( void )
+int main(void)
 {
-   printf( "Welcome to C!\n" );
-} // end function main 
+	printf("%s", "Welcome to C!\n");
+	unsigned int length = 0;
+	unsigned int width = 0;
+	unsigned int area = 0;
+	unsigned int div = 0;
+	puts("Enter the length");
+	scanf("%d", &length);
+	puts("Enter the width");
+	scanf("%d", &width);
+	area = areaCalc(length, width);
+	printf("%s", "Area is: ");
+	printf("%d", area);
+	div = lwDiv(length, width);
+	printf("%s", "\nLength divided by width is: ");
+	printf("%d", div);
+	return 0;
+} //end function main
 
+int areaCalc(int length, int width) {
+	return length * width;
+}
+
+
+int lwDiv(int length, int width) {
+	return length / width;
+}
 
 /**************************************************************************
  * (C) Copyright 1992-2015 by Deitel & Associates, Inc. and               *
